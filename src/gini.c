@@ -157,7 +157,7 @@ ginipred(double *y, double *pred)
     double temp;
     i = (int) y[0] - 1;
     j = (int) *pred - 1;
-    temp = prior[i] * loss[i * numclass + j];
+    temp = prior[i] * loss[j * numclass + i];
     return temp;
 }
 
